@@ -8,15 +8,17 @@
     "lint": "eslint 'src/**/*.js'",
     "lint:fix": "prettier-eslint 'src/**/*.js' --write"
   },
-  "husky":{
-    "hooks":{
+  "husky": {
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged":{
-    "*.js": ["npm run lint:fix", "git add"]
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frank-liu/conifgFrontendWorkFlow.git"
