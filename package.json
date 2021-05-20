@@ -4,8 +4,19 @@
   "description": "dfds",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 'src/**/*.js'",
+    "lint:fix": "prettier-eslint 'src/**/*.js' --write"
   },
+"husky":{
+  "hooks":{
+    "pre-commit": "lint-staged"
+  }
+},
+"lint-staged":{
+  "*.js": ["npm run lint:fix", "git add"]
+},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frank-liu/conifgFrontendWorkFlow.git"
@@ -16,5 +27,22 @@
   "bugs": {
     "url": "https://github.com/frank-liu/conifgFrontendWorkFlow/issues"
   },
-  "homepage": "https://github.com/frank-liu/conifgFrontendWorkFlow#readme"
+  "homepage": "https://github.com/frank-liu/conifgFrontendWorkFlow#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "prettier-eslint": "^12.0.0",
+    "prettier-eslint-cli": "^5.0.1"
+  }
 }
