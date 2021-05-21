@@ -7,9 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint 'src/**/*.js'",
     "lint:fix": "prettier-eslint 'src/**/*.js' --write",
-    "prepare": "husky install",
     "ga": "git add . && lint-staged",
-    "commit": "cz"
+    "commit": "yarn ga && cz"
   },
   "lint-staged": {
     "src/**/*.{js,vue}": [
@@ -50,5 +49,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "dependencies": {}
 }
