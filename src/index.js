@@ -8,4 +8,7 @@ console.log("he l lo" + "worl d")
 console.log("run   lint-  s taged")
 console.log("run   l  i  nt-  s taged")
 
-console.log("添加新行")
+console.log("添加新行.")
+
+
+console.log('today is what date.');
