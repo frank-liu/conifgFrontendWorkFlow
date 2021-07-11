@@ -7,4 +7,4 @@
 console.log("he l lo" + "worl d")
 console.log("run   lint-  s taged")
 console.log("run   l  i  nt-  s taged")
-console.log("add a new line")
+console.log("添加新行")
